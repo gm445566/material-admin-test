@@ -1,0 +1,124 @@
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Main Web</title>
+</head>
+
+<body class="grey lighten-4">
+    {{renderPage}}
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+</body>
+
+<template name="layout">   
+        {{> nav}} 
+        {{> yield}}
+        {{> footer}} 
+        {{> preloader}}
+
+</template>
+
+<!-- Navbar menu -->
+<template name="nav">
+
+    <nav class="blue darken-2">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Mark-Cop</a>
+                <a href="#" data-target="slide-nav" class="sidenav-trigger show-on-large right">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    
+                    <li class="{{isSelected 'home'}}">
+                        <a href="/" class="home-click">Dashboard</a>
+                    </li>
+                    <li  class="{{isSelected 'posts'}}">
+                        <a href="/posts">Posts</a>
+                    </li>
+                    <li  class="{{isSelected 'categories'}}">
+                        <a href="/categories">Categories</a>
+                    </li>
+                    <li  class="{{isSelected 'comments'}}">
+                        <a href="/comments">Comments</a>
+                    </li>
+                    <li  class="{{isSelected 'users'}}">
+                        <a href="/users">User</a>
+                    </li>
+                </ul>
+                <!-- Side nav -->
+                <ul id="slide-nav" class="sidenav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="img/ocean.jpg" alt="">
+                            </div>
+                            <a href="#">
+                                <img src="img/person1.jpg" alt="" class="circle">
+                            </a>
+                            <a href="#">
+                                <span class="name white-text">John Doe</span>
+                            </a>
+                            <a href="#">
+                                <span class="email white-text">jdoe@gmail.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="{{isSelected 'home'}}">
+                        <a href="/" class="home-click">
+                            <i class="material-icons">dashboard</i> Dashboard</a>
+                    </li>
+
+                    <li  class="{{isSelected 'posts'}}">
+                        <a href="/posts">Posts</a>
+                    </li>
+                    <li  class="{{isSelected 'categories'}}">
+                        <a href="/categories">Categories</a>
+                    </li>
+                    <li  class="{{isSelected 'comments'}}">
+                        <a href="/comments">Comments</a>
+                    </li>
+                    <li  class="{{isSelected 'users'}}">
+                        <a href="/users">User</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Account Controls</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="waves-effect">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+
+<!-- Footer -->
+<template name="footer">
+        <footer class="section blue darken-2 white-text center">
+                <p>Madmin Panel Copyright &copy; 2018</p>
+              </footer>
+</template>
+
+<!-- Preloader -->
+<template name="preloader">
+        <br>
+        <div class="loader preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </template>
