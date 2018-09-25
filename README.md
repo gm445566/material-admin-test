@@ -134,6 +134,8 @@ Template.layout.onRendered(function() {
 ```
 ### Screenshots
 
-![alt text](https://raw.githubusercontent.com/gm445566/material-travelville/master/readme/screen1.png)
+![alt text](https://raw.githubusercontent.com/gm445566/material-admin-test/master/readme/screen1.png)
+![alt text](https://raw.githubusercontent.com/gm445566/material-admin-test/master/readme/screen2.png)
+![alt text](https://raw.githubusercontent.com/gm445566/material-admin-test/master/readme/screen3.png)
 
 project reference from [Udemy course of Traversy Media](https://www.udemy.com/materialize-css-from-scratch-with-5-projects/)
