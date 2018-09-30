@@ -28,7 +28,8 @@ because I have problem with installing by "meteor add materialize-css ". You wil
     }
 ```
 
-
+### Demo
+[https://material-madmin-neneavdsjw.now.sh](https://material-madmin-neneavdsjw.now.sh/)
 
 ### Design
 This project will have template/section each content that is
